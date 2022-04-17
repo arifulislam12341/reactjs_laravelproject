@@ -1,5 +1,6 @@
 import React, { useState, userEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { Form, Button, } from "react-bootstrap";
 import axios from "axios";
 
 const Update = () => {
@@ -39,18 +40,21 @@ const Update = () => {
 
     return (
         <div>
-            <h1>Update Serviceprovider</h1>
+            <h2>Update Serviceprovider</h2>
             <form>
-                Enter  Name:<input type="text" value={name} onChange={(e) => setName(e.target.value)}></input><br></br>
-                Enter Phone: <input type="text" value={phoneno} onChange={(e) => setPhone(e.target.value)}></input><br></br>
-                SetServicetype:<input type="text" value={servicetype} onChange={(e) => setServicetype(e.target.value)}></input><br></br>
+                <b>Enter  Name:</b><br></br> <input type="text" value={name} onChange={(e) => setName(e.target.value)}></input><br></br>
+                <b>Enter Phone:</b> <br></br> <input type="text" value={phoneno} onChange={(e) => setPhone(e.target.value)}></input><br></br>
+                <b>SetServicetype:</b> <br></br><input type="text" value={servicetype} onChange={(e) => setServicetype(e.target.value)}></input><br></br>
 
-                Enter Address: <input type="text" value={address} onChange={(e) => setAddress(e.target.value)}></input><br></br>
+                <b>Enter Address:</b> <br></br> <input type="text" value={address} onChange={(e) => setAddress(e.target.value)}></input><br></br>
 
 
             </form >
-            <button onClick={updateSubmit}>Update Admin</button>
-
+            {/* <button onClick={updateSubmit}>Update </button> */}
+            <br></br>
+            <Button variant="success" type="submit" onClick={updateSubmit}>
+                UPDATE
+            </Button>
         </div >
 
     )

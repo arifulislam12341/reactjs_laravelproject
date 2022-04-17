@@ -9,10 +9,10 @@ const Head = () => {
 
             <Link to="/">Login</Link>
 
-            <Link to="/Registration">Registration</Link>
-            <Link to="/ServiceProviderInformation">Service ProviderInformation</Link>
-
-            <Link to="/update">Update</Link>
+            <br></br> <Link to="/Registration">Registration</Link><br></br>
+            <Link to="/ServiceProviderInformation">Service Provider Information</Link> <br></br>
+            <Link to="/update">Update</Link> <br></br>
+            <Link to="/Delete">Delete</Link> <br></br>
             <Link to="/logout">Logout</Link>
         </div>
     )

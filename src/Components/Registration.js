@@ -1,8 +1,11 @@
 import React, { useState, userEffect } from "react";
+import { Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 const Registration = () => {
     //let [token, setToken] = useState("");
+    let history = useHistory();
     let [name, setName] = useState("");
     let [email, setEmail] = useState("");
     let [password, setPassword] = useState("");
@@ -21,6 +24,7 @@ const Registration = () => {
                 // localStorage.setItem('email', JSON.stringify(user));
                 // console.log(localStorage.getItem('user'));
                 alert("Registration successful");
+                history.push("/");
             }).catch(err => {
                 console.log(err);
                 alert(err);
@@ -41,7 +45,11 @@ const Registration = () => {
                 <b>Address:</b><br></br> <input type="text" value={address} onChange={(e) => setAddress(e.target.value)}></input><br></br>
 
             </form>
-            <button onClick={registrationSubmit}>Signin</button>
+            {/* <button onClick={registrationSubmit}>Signin</button> */}
+            <br></br>
+            <Button variant="success" type="submit" onClick={registrationSubmit}>
+                REGISTER
+            </Button>
 
         </div>
 

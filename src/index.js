@@ -10,13 +10,11 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Head from './Components/Head';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-// import ProductDetail from './Components/ProductDetail';
-// import AllPosts from './Components/AllPosts';
-// import EffectHookCheck from './Components/EffectHookCheck';
-// import ColorState from './Components/ColorState';
+
 import Login from './Components/Login';
 import Registration from './Components/Registration';
 // import serviceproviderInfo from './Components/serviceproviderInfo';
+import Delete from './Components/Delete';
 import ServiceProviderInfo from './Components/ServiceProviderInfo';
 import Update from './Components/Update';
 import Logout from './Components/Logout';
@@ -76,8 +74,12 @@ ReactDOM.render(
         <Route exact path="/Registration">
           <Registration />
         </Route>
+
         <Route exact path="/update">
           <Update />
+        </Route>
+        <Route exact path="/Delete">
+          <Delete />
         </Route>
         <Route exact path="/logout">
           <Logout />
